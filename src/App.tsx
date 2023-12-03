@@ -4,9 +4,9 @@ import etsyData from './data/etsy.json';
 
 
 function App() {
-  const data: ListingProps['items'] = etsyData;
+  const filteredData: (ListingProps['items'][number])[] = etsyData.filter(item => item !== undefined) as (ListingProps['items'][number])[];
   return (
-    <Listing items={data} />
+    <Listing items={filteredData} />
   );
 }
 

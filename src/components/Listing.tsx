@@ -1,6 +1,5 @@
 import React from 'react';
-import ListItem from './ListItem';
-import { Item } from './ListItem';
+import ListItem, { Item } from './ListItem';
 
 
 export interface ListingProps {
