@@ -3,7 +3,7 @@ import ListItem from './ListItem';
 import { Item } from './ListItem';
 
 
-interface ListingProps {
+export interface ListingProps {
   items: Item[];
 }
 

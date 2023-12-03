@@ -7,7 +7,7 @@ export interface Item {
   };
   title: string;
   currency_code: string;
-  price: number;
+  price: string;
   quantity: number;
   state: string;
 }

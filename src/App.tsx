@@ -1,8 +1,10 @@
 import './App.css';
-import Listing from './components/Listing';
-import data from './data/etsy.json';
+import Listing, { ListingProps } from './components/Listing';
+import etsyData from './data/etsy.json';
+
 
 function App() {
+  const data: ListingProps['items'] = etsyData;
   return (
     <Listing items={data} />
   );
