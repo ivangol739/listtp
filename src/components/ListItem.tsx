@@ -20,15 +20,7 @@ const ListItem: React.FC<{ item: Item }> = ({ item }) => {
       return null;
   }
 
-    let name;
-  if (item.title !== undefined) {
-    name = item.title.length > 50 ? `${item.title.slice(0, 50)}...` : title;
-  } else {
-    name = ''
-  }
-
-
-    // const name = title.length > 50 ? `${title.slice(0, 50)}...` : title;
+  const name = title.length > 50 ? `${title.slice(0, 50)}...` : title;
 
   let pricetag: string;
   let colorclass: string;
