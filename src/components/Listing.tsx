@@ -1,22 +1,20 @@
-import React, { FC } from 'react';
+import React from 'react';
 import ListItem from './ListItem';
+import { Item } from './ListItem';
 
-interface ListItem {
-  listing_id: number;
-}
 
 interface ListingProps {
-  items: ListItem[];
+  items: Item[];
 }
 
-const Listing: FC<ListingProps> = (props) => {
-  const { items } = props;
-
+const Listing: React.FC<ListingProps> = ({ items }) => {
   return (
-    <ul className='item-list'>
-      {items.map((item) => <ListItem key={item.listing_id} item={item} />)}
-    </ul>
-  )
+      <ul className='item-list'>
+          {items.map((item, index) => (
+              <ListItem key={index} item={item} />
+          ))}
+      </ul>
+  );
 }
 
 export default Listing;
